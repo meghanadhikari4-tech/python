@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 data=pd.DataFrame({
@@ -12,3 +13,8 @@ model=LinearRegression()
 model.fit(X_train,Y_train)
 prediction=model.predict([[6]])
 print(prediction)
+plt.scatter(X,Y,color="blue")
+plt.plot(X,model.predict(X),color="red")
+plt.xlabel("marks")
+plt.ylabel("subject")
+plt.show()
