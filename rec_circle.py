@@ -10,6 +10,7 @@ else:
     color=(100,230,35)
     cv2.rectangle(image,pt1,pt2,color,thickness)
     cv2.circle(image,(150,150),75,(0,200,0),2)
+    cv2.putText(image,"hi i am meghan",(150,350),cv2.FONT_HERSHEY_DUPLEX,1.2,(255,0,67),2)
     cv2.imshow("rectangle and circle",image)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
